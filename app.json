@@ -1,0 +1,32 @@
+{
+  "expo": {
+    "name": "Frère Jae",
+    "slug": "frere-jae",
+    "scheme": "frerejae",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "icon": "./assets/icon.png",
+    "splash": { "image": "./assets/splash.png", "resizeMode": "contain", "backgroundColor": "#FFFFFF" },
+    "ios": {
+      "bundleIdentifier": "com.frerejae.app",
+      "supportsTablet": false,
+      "infoPlist": { "NSFaceIDUsageDescription": "Use Face ID to unlock your Frère Jae account." }
+    },
+    "android": {
+      "package": "com.frerejae.app",
+      "adaptiveIcon": { "foregroundImage": "./assets/adaptive-icon.png", "backgroundColor": "#FFFFFF" },
+      "permissions": ["USE_BIOMETRIC", "USE_FINGERPRINT"]
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      "expo-local-authentication",
+      ["expo-location", { "locationWhenInUsePermission": "Allow Frère Jae to fill in your delivery address." }]
+    ],
+    "experiments": { "typedRoutes": true },
+    "extra": {
+      "eas": { "projectId": "REPLACE_WITH_EAS_PROJECT_ID" }
+    }
+  }
+}
